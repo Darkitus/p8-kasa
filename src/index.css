@@ -1,0 +1,21 @@
+/* Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: calc(12px + 1.5vmin);
+  margin: 0 90px;
+}
