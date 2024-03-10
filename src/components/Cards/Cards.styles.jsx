@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const CardContainer = styled.div`
   display: flex;
@@ -14,9 +15,15 @@ export const CardContainer = styled.div`
   row-gap: 50px;
 `;
 
+export const StyledLink = styled(Link)`
+  flex: 0 0 30%;
+  height: 340px;
+  border-radius: 10px;
+  text-decoration: none;
+`;
+
 export const Cards = styled.div`
   display: flex;
-  flex: 0 0 30%;
   height: 340px;
   border-radius: 10px;
   background: linear-gradient(
@@ -36,7 +43,7 @@ export const CardTitle = styled.h2`
   align-self: flex-end;
   padding: 0 20px 0 20px;
   color: #ffffff;
-  font-size: 1.3vw;
+  font-size: 18px;
   font-weight: 700;
   min-height: 4.5vw;
 `;

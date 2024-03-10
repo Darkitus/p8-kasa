@@ -8,7 +8,8 @@ h5,
 h6,
 p,
 ol,
-ul {
+ul,
+span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,6 +17,6 @@ ul {
 
 body {
   font-family: Montserrat, sans-serif;
-  font-size: calc(12px + 1.5vmin);
+  font-size: 16px;
   margin: 0 90px;
 }

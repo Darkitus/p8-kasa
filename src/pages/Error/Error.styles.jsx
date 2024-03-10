@@ -11,18 +11,18 @@ export const ErrorContainer = styled.div`
 
 export const ErrorTitle = styled.h1`
   color: #ff6060;
-  font-size: 20vw;
+  font-size: 288px;
   font-weight: 700;
 `;
 
 export const ErrorText = styled.span`
   color: #ff6060;
-  font-size: 2.5vw;
+  font-size: 36px;
   font-weight: 500;
 `;
 
 export const ErrorLink = styled(Link)`
   color: #000000;
-  font-size: 1.3vw;
+  font-size: 18px;
   font-weight: 500;
 `;

@@ -99,7 +99,7 @@ function App() {
           {/* Route pour la page d'accueil */}
           <Route path="/about" element={<About />} />{" "}
           {/* Route pour la page à propos */}
-          <Route path="/accommodation" element={<Accommodation />} />{" "}
+          <Route path="/accommodation/:id" element={<Accommodation />} />{" "}
           {/* Route pour la page de logement */}
           <Route path="*" element={<Error />} />{" "}
           {/* Si aucune route ne correspond, affiche la page d'erreur */}

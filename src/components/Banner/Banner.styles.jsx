@@ -16,13 +16,14 @@ export const BannerImage = styled.img`
   height: 100%;
   object-fit: cover;
   filter: brightness(40%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: ${(props) =>
+    props.$shadow ? "0px 4px 4px rgba(0, 0, 0, 0.25)" : "none"};
 `;
 
 export const BannerTitle = styled.h1`
   color: #ffffff;
   position: absolute;
-  font-size: 3.3vw;
+  font-size: 48px;
   font-weight: 700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
