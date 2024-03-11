@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import * as S from "./Accommodation.styles";
 import Carousel from "../../components/Carousel/Carousel";
 import accommodationsData from "../../assets/logements.json";
@@ -7,7 +7,19 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 
 function Accommodation() {
   const { id } = useParams(); // Récupération de l'id du logement depuis l'URL
+  const navigate = useNavigate(); // Hook de navigation
   const accommodation = accommodationsData.find((item) => item.id === id); // Récupération des données du logement en fonction de l'id
+
+  useEffect(() => {
+    if (!accommodation) {
+      navigate("/non-existent-route"); // Redirection vers la page d'erreur si le logement n'existe pas
+    }
+  }, [accommodation, navigate]);
+
+  if (!accommodation) {
+    return null;
+  }
+
   const [firstName, lastName] = accommodation.host.name.split(" "); // Pour séparer le prénom et le nom de famille du host
 
   const renderStars = () => {

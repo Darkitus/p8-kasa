@@ -34,11 +34,28 @@ export const DropdownArrow = styled.img`
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-80px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-80px);
   }
 `;
 
@@ -50,5 +67,10 @@ export const DropdownContent = styled.div`
   font-size: 18px;
   font-weight: 400;
   z-index: 0;
-  animation: ${fadeIn} 0.5s ease-out;
+  &.open {
+    animation: ${fadeIn} 0.5s ease-out forwards;
+  }
+  &.close {
+    animation: ${fadeOut} 0.5s ease-out forwards;
+  }
 `;

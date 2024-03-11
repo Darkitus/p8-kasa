@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 92%;
   height: 100%;
   background-color: #f6f6f6;
@@ -12,25 +12,22 @@ export const CardContainer = styled.div`
   justify-items: center;
   padding: 43px 50px 50px 50px;
   margin: 0 50px 50px 0;
-  row-gap: 50px;
+  gap: 50px 50px;
 `;
 
 export const StyledLink = styled(Link)`
-  flex: 0 0 30%;
+  position: relative;
   height: 340px;
   border-radius: 10px;
   text-decoration: none;
 `;
 
-export const Cards = styled.div`
+export const Cards = styled.img`
   display: flex;
   height: 340px;
+  width: 340px;
   border-radius: 10px;
-  background: linear-gradient(
-    0deg,
-    rgba(191, 80, 80, 1) 0%,
-    rgba(255, 96, 96, 1) 61%
-  );
+  object-fit: cover;
 `;
 
 export const InvisibleCard = styled.div`
@@ -39,11 +36,11 @@ export const InvisibleCard = styled.div`
 `;
 
 export const CardTitle = styled.h2`
-  display: flex;
-  align-self: flex-end;
-  padding: 0 20px 0 20px;
+  position: absolute;
+  bottom: 20px;
+  padding: 0 10px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
-  min-height: 4.5vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Ombre portée pour rendre le texte plus lisible sur certaines images
 `;

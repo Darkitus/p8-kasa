@@ -7,9 +7,8 @@ function Cards() {
     <S.CardContainer>
       {data.map((item) => (
         <S.StyledLink to={`/accommodation/${item.id}`} key={item.id}>
-          <S.Cards>
-            <S.CardTitle>{item.title}</S.CardTitle>
-          </S.Cards>
+          <S.Cards src={item.cover} />
+          <S.CardTitle>{item.title}</S.CardTitle>
         </S.StyledLink>
       ))}
       <S.InvisibleCard />

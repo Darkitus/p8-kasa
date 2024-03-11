@@ -49,6 +49,7 @@ export const AccommodationHostInfos = styled.div`
   align-items: flex-end;
   width: 20%;
   row-gap: 20px;
+  align-self: flex-start;
 `;
 
 export const AccommodationHost = styled.div`
