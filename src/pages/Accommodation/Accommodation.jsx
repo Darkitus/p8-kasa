@@ -36,6 +36,17 @@ function Accommodation() {
     );
   };
 
+  const dropdownProps = {
+    $headerBorderRadius: "15px",
+    $containerWidth550px: "100%",
+    $headerBorderRadius550px: "5px",
+    $headerHeight550px: "30px",
+    $headerPadding550px: "0 10px",
+    $titleFontSize: "18px",
+    $arrowHeight550px: "24px",
+    $arrowWidth550px: "24px",
+  };
+
   return (
     <S.AccommodationContainer>
       <Carousel id={id} />
@@ -64,15 +75,24 @@ function Accommodation() {
         <S.AccommodationRating>{renderStars()}</S.AccommodationRating>
       </S.AccommodationHostInfos>
       <S.DropdownList>
-        <Dropdown title="Description" content={accommodation.description} />
         <Dropdown
-          title="Équipements"
+          {...dropdownProps}
+          title={<S.DropdownTitle>Description</S.DropdownTitle>}
+          content={
+            <S.DropdownDescription>
+              {accommodation.description}
+            </S.DropdownDescription>
+          }
+        />
+        <Dropdown
+          {...dropdownProps}
+          title={<S.DropdownTitle>Équipements</S.DropdownTitle>}
           content={
             <ul>
               {accommodation.equipments.map((equipment, index) => (
-                <S.AccommodationEquipments key={index}>
+                <S.DropdownEquipments key={index}>
                   {equipment}
-                </S.AccommodationEquipments>
+                </S.DropdownEquipments>
               ))}
             </ul>
           }

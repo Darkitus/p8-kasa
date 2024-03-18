@@ -4,14 +4,39 @@ import Cards from "../../components/Cards/Cards";
 import homepageImage from "../../assets/bannerImage.png";
 
 function Home() {
+  const cardProps = {
+    $cardContainerBackgroundColor: "#f6f6f6",
+    $cardContainerPadding: "43px 50px 50px 50px",
+    $cardContainerGap: "50px 50px",
+    $cardContainerMarginBottom: "50px",
+    $cardContainerBackgroundColorWidth590px: "unset",
+    $cardContainerGap590px: "20px 0px",
+    $cardContainerPadding590px: "unset",
+    $cardContainerMarginBottom590px: "27px",
+    $cardsWidth1350px: "335px",
+    $cardsHeight1350px: "300px",
+    $cardsHeight590px: "255px",
+    $invisibleCardDisplayNone1399px: "none",
+    $invisibleCardDisplayNone1790px: "none",
+  };
+
+  const bannerProps = {
+    $bannerContainerMarginBottom999px: "22px",
+    $bannerImage: homepageImage,
+    bannerTitle: "Chez vous, partout et ailleurs",
+    $bannerImageShadow: true,
+    $bannerImageBrightness: "40%",
+    $bannerImageBorderRadius999px: "10px",
+    $titleFontSize940px: "34px",
+    $titleFontSize730px: "24px",
+    $titleMaxWidth440px: "70%",
+    $titlePositionLeft440px: "16px",
+  };
+
   return (
     <>
-      <Banner
-        bannerImage={homepageImage}
-        bannerTitle="Chez vous, partout et ailleurs"
-        shadow={true} // J'ai ajouté ce props pour ajouter une ombre à la bannière sur cette page uniquement
-      />
-      <Cards />
+      <Banner {...bannerProps} />
+      <Cards {...cardProps} />
     </>
   );
 }

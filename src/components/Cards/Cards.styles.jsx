@@ -5,34 +5,53 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 92%;
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: ${(props) => props.$cardContainerBackgroundColor};
   border-radius: 25px;
   justify-items: center;
-  padding: 43px 50px 50px 50px;
-  margin: 0 50px 50px 0;
-  gap: 50px 50px;
+  padding: ${(props) => props.$cardContainerPadding};
+  gap: ${(props) => props.$cardContainerGap};
+  margin-bottom: ${(props) => props.$cardContainerMarginBottom};
+  @media (max-width: 859px) {
+  }
+  @media (max-width: 590px) {
+    background-color: ${(props) =>
+      props.$cardContainerBackgroundColorWidth590px};
+    gap: ${(props) => props.$cardContainerGap590px};
+    padding: ${(props) => props.$cardContainerPadding590px};
+    margin-bottom: ${(props) => props.$cardContainerMarginBottom590px};
+  }
 `;
 
 export const StyledLink = styled(Link)`
   position: relative;
-  height: 340px;
   border-radius: 10px;
   text-decoration: none;
 `;
 
 export const Cards = styled.img`
   display: flex;
-  height: 340px;
   width: 340px;
+  height: 340px;
   border-radius: 10px;
   object-fit: cover;
+  @media (max-width: 1350px) {
+    width: ${(props) => props.$cardsWidth1350px};
+    height: ${(props) => props.$cardsHeight1350px};
+  }
+  @media (max-width: 859px) {
+    height: ${(props) => props.$cardsHeight590px};
 `;
 
 export const InvisibleCard = styled.div`
-  flex: 0 0 30%;
+  width: 340px;
   visibility: hidden;
+  @media (max-width: 1399px) {
+    display: ${(props) => props.$invisibleCardDisplayNone1399px};
+  }
+  @media (min-width: 1790px) {
+    display: ${(props) => props.$invisibleCardDisplayNone1790px};
+  }
 `;
 
 export const CardTitle = styled.h2`

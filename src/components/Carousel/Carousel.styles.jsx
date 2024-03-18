@@ -19,9 +19,12 @@ export const ImageContainer = styled.div`
 
 export const CarouselImage = styled.img`
   width: 100%;
-  height: 420px;
+  height: 415px;
   object-fit: cover;
   border-radius: 25px;
+  @media (max-width: 550px) {
+    height: 255px;
+  }
 `;
 
 export const PrevButton = styled(LeftArrow)`
@@ -29,6 +32,10 @@ export const PrevButton = styled(LeftArrow)`
   left: 20px;
   z-index: 1;
   cursor: pointer;
+  @media (max-width: 550px) {
+    height: 24px;
+    width: 24px;
+  }
 `;
 
 export const NextButton = styled(RightArrow)`
@@ -36,6 +43,10 @@ export const NextButton = styled(RightArrow)`
   right: 20px;
   z-index: 1;
   cursor: pointer;
+  @media (max-width: 550px) {
+    height: 24px;
+    width: 24px;
+  }
 `;
 
 export const ImageCounter = styled.span`
@@ -45,7 +56,7 @@ export const ImageCounter = styled.span`
   color: white;
   font-size: 18px;
   font-weight: 500;
-  @media (max-width: 375px) {
+  @media (max-width: 550px) {
     display: none;
   }
 `;
