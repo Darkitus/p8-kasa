@@ -12,8 +12,6 @@ export const CardContainer = styled.div`
   padding: ${(props) => props.$cardContainerPadding};
   gap: ${(props) => props.$cardContainerGap};
   margin-bottom: ${(props) => props.$cardContainerMarginBottom};
-  @media (max-width: 859px) {
-  }
   @media (max-width: 590px) {
     background-color: ${(props) =>
       props.$cardContainerBackgroundColorWidth590px};

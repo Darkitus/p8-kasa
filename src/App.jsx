@@ -24,7 +24,6 @@ function App() {
                 <NavLink
                   to="/" // Lien vers la page d'accueil //
                   className="navLink"
-                  activeclassname="active" // Si la route est active, applique la classe active //
                 >
                   Accueil
                 </NavLink>
@@ -33,7 +32,6 @@ function App() {
                 <NavLink
                   to="/about" // Lien vers la page à propos //
                   className="navLink"
-                  activeclassname="active" // Si la route est active, applique la classe active //
                 >
                   À propos
                 </NavLink>
